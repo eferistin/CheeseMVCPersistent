@@ -16,10 +16,11 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Type"></label>
-        <select asp-for="Type" asp-items="Model.CheeseTypes"></select>
+        <label asp-for="CategoryID"></label>
+        <select asp-for="CategoryID" asp-items="Model.Categories">@Model.Categories</select>
     </div>
+    @* The reason for CategoryID, it able to see each individual categories defined in the list on AddCheeseViewModel.cs, then displays all categories, lines 33 to 43
+    *@
+                <input type="submit" value="Add Cheese" />
 
-    <input type="submit" value="Add Cheese" />
-
-</form>
+            </form>
